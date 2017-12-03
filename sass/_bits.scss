@@ -1,0 +1,21 @@
+@mixin bp($point) {
+  @if $point == l {
+    @media (min-width: 65rem) { @content; }
+  }
+  @else if $point == m {
+    @media (min-width: 45rem) { @content; }
+  }
+  @else if $point == s {
+    @media (min-width: 35rem)  { @content; }
+  }
+}
+
+$black: rgb(30,30,30);
+$darkgray: rgb(120,120,120);
+$gray: rgb(180,180,182);
+$lightgray: rgb(220,220,220);
+$blue: #2072FF;
+$sans: "Suisse Int'l";
+$mono: "Suisse Int'l Mono";
+
+$fast: 230ms;

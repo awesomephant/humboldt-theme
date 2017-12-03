@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{%include 'header.twig'%}
+
+<header class="page-header">
+{{title}}
+<p>{{posts | length}} Objekte</p>
+</header>
+<div class="search-results">
+<div class="object-list">
+	{% for obj in posts %}
+	{% include "object-card.twig" %}
+	{% endfor %}
+	</div>
+	</div>
+{% endblock %}

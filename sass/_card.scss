@@ -1,0 +1,41 @@
+.card {
+	margin-bottom: 1rem;
+	display: inline-block;
+	position: relative;
+}
+
+.card-chip {
+	@extend .chip;
+	position: absolute;
+	top: .5rem;
+	left: .5rem;
+	font-size: .7rem;
+	z-index: 100;
+}
+
+.card-content {
+	padding-top: .5rem;
+}
+
+.card-title {
+	font-weight: 500;
+	font-size: 1rem;
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+.card-image {
+	display: block;
+	width: 100%;
+	border-radius: 2px;
+	transition: $fast;
+	&:hover, &:focus {
+		opacity: .8;
+	}
+}
+
+.card-description {
+	font-size: .9rem;
+}

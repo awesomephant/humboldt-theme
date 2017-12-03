@@ -1,0 +1,18 @@
+{% extends "base.twig" %}
+{% block content %}
+<section class="home-hero">
+	<h2 class='hero-title'>Alexander von Humboldt-Gymnasium Konstanz Lehrsammlung</h2>
+	{% include "searchform.twig" %}
+</section>
+<nav class="home-classes">
+	{% for class in bio_classes %}
+<a href="{{class.link}}" class="home-class">{{class.title}}</a>
+	{% endfor %}
+	</nav>
+	{% for obj in post.get_field('featured_objects') %}
+	{# <div class="home-featured_card">
+		{{ include("object-card.twig") }}	
+	</div> #}
+	{% endfor %}
+
+{% endblock %}

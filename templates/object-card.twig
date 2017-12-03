@@ -1,0 +1,11 @@
+{% set image = obj.get_field('object_images')[0] %}
+<div class='card'>
+    <a class='card-image-link' href="{{obj.link}}">
+    <img class='card-image' src="{{ TimberImage(image).src | resize(400, 500)}}" alt="{{obj.title}}">
+    </a>
+    <main class="card-content">
+        <p class="card-description">{{obj.object_id}}</p>
+        <h2 class='card-title'><a href="{{obj.link}}">{{obj.title}}</a></h2>
+        <p class="card-description">{{obj.latin_title}}</p>
+    </main>
+</div>

@@ -1,0 +1,101 @@
+body {
+    font-family: "Suisse Int'l";
+    color: $black;
+}
+
+a {
+    color: $black;
+    &:hover, &:focus {
+        color: rgba($black, .7)
+    }
+}
+
+.site-header {
+    padding: 1rem 5%;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    flex-flow: column;
+    @include bp(m){
+        flex-flow: row;
+    }
+}
+
+.site-title {
+    text-decoration: none;
+    color: $black;
+    font-weight: 400;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.site-footer {
+    font-size: .8rem;
+    padding: 1rem;
+    color: $gray;
+    .home & {
+        position: absolute;
+      bottom: 0;
+    }
+}
+
+.search-form {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    @include bp(m){
+        width: 60%;
+    }
+    .screen-reader-text {
+        display: none;
+    }
+}
+
+.search-field {
+    font-size: 1rem;
+    line-height: .8;
+    border-radius: 3px;
+    border: 1px solid $black;
+    padding: .8rem 1rem;
+    width: calc(100% - 3rem);
+    font-family: $sans;
+    appearance: none;
+    &:focus {
+        outline: none;
+    }
+    &::placeholder {
+        color: darken($lightgray, 5);
+    }
+}
+
+.search-submit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 3rem;
+    font-size: 0;
+    background-image: url('/wp-content/themes/humboldt-theme/assets/search.svg');
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-color: transparent;
+    cursor: pointer;
+    background-position: center top .8rem;
+    &:hover, &:focus {
+        opacity: .6;
+    }
+}
+
+div.search-results {
+    padding: 1rem 5%;
+}
+
+.page-header {
+    padding: 1rem 5%;
+    font-size: 1.4rem;
+    p {
+        font-size: 1.2rem;
+        color: $gray;
+    }
+}

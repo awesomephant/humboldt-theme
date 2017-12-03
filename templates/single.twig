@@ -1,0 +1,52 @@
+{% extends "base.twig" %}
+{% block content %}
+	{%include 'header.twig'%}
+
+	<article class="object post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+			<div class="object-images">
+			{% for image in post.get_field('object_images') %}
+				<div class="object-image">
+				<a href="{{TimberImage(image).src}}">
+			    <img src="{{ TimberImage(image) | resize(700)}}" />
+				</a>
+				</div>
+			{% endfor %}
+			</div>
+			<section class="object-details">
+			<section class='object-details-section'>
+			<h2 class="section-title">Identifikation</h2>
+			<ul class='section-details'>
+				<li><h3>Titel</h3><span>{{ post.title }}</span></li>
+				<li><h3>Regalnummer</h3><span>{{ post.object_id }}</span></li>
+				<li><h3>Spezies</h3><span>{{ post.latin_title }}</span></li>
+				<li><h3>Erhaltungszustand</h3><span>{{post.conservation_status}}</span></li>
+				{% for class in post.terms('bio_class') %}
+				<li><h3>Klasse</h3><span><a href="{{class.link}}">{{class.name}}</a></span></li>
+				{% endfor %}
+	
+			</ul>
+			</section>
+			<section class='object-details-section'>
+			<h2 class="section-title">Details</h2>
+			<ul class='section-details'>
+				<li><h3>Herkunft</h3><span>{{ post.origin }}</span></li>
+				<li><h3>Permalink</h3><span><a href='{{post.link}}'>{{post.link}}</a></span></li>
+				<li><h3>Referenz</h3><input type="text" value='Kohler, F. 2017. {{post.title}}. Digitalfotografie. Verfügbar unter: {{post.link}} [Aufgerufen {{'now'|date('d/m/Y')}}]'></li>
+				<li><h3>Lizenz</h3><span><a href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 International</a></span></li>
+			</ul>
+			</section>
+			<section class='object-details-section'>
+			<h2 class="section-title">In dieser Klasse</h2>
+			<div class='section-details'>
+			<div class='object-list'>
+						{% for obj in related_class %}
+					{% include "object-card.twig" %}
+				{% endfor %}
+	
+			</div>
+			<a href="/bio_class/{{myClass.slug}}" class="btn">Alle anzeigen</a>
+			</div>
+			</section>
+			</section>
+	</article>
+{% endblock %}

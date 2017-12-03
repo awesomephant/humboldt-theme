@@ -1,0 +1,7 @@
+vendor
+wp-content
+.ftppass
+composer.lock
+node_modules/
+.sass-cache/
+yarn.lock

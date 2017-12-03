@@ -1,0 +1,146 @@
+.object-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .card {
+      flex-shrink: 1;
+      flex-basis: 50%;
+      padding-right: .5rem;
+      @include bp(m){
+        flex-basis: 25%;
+      }
+    }
+}
+
+.object {
+  display: grid;
+  @include bp(m) {
+    //       grid-template-columns: 1fr 1fr;
+  }
+}
+.object-details {
+    grid-column: span 1;
+    padding: 1rem 5%;
+    line-height: 1.45;
+    a {
+    }
+}
+
+.object-details-section {
+  display: flex;
+  font-size: 1.1rem;
+  border-bottom: 1px solid $lightgray;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  flex-flow: column;
+  @include bp(m){
+    flex-flow: row;
+  }
+  .section-title {
+    flex-basis: 30%;
+    font-weight: 600;
+    margin-bottom: .5rem;
+    @include bp(m){
+      font-weight: 400;
+    }
+  }
+  .section-details {
+    flex-basis: 70%;
+    flex-shrink: 1;
+    list-style: none;
+    li {
+      margin-bottom: .8rem;
+    }
+    h3 {
+      color: rgba($black, .5);
+    }
+    li a {
+      text-decoration: none;
+      border-bottom: .6px solid $black;
+    }
+    input {
+      background: rgba($lightgray, .5);
+      padding: .8rem;
+      max-width: 35rem;
+      border-radius: 2px;
+      display: block;
+      border: 1px solid $lightgray;
+      width: 100%;
+      &:focus {
+        box-shadow: none;
+        outline: 0;
+        border-color: $black;
+      }
+    }
+    span {
+      display: block;
+      max-width: 30rem;
+    }
+  }
+}
+
+.object-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  max-width: 100%;
+  @include bp(m){
+      flex-wrap: nowrap;
+  }
+}
+.object-image {
+    flex-shrink: 1;
+    margin-right: 1rem;
+    a {
+      cursor: zoom-in;
+      display: block;
+      transition: $fast;
+      &:hover, &:focus {
+        transform: scale(1.01);
+      }
+    }
+    img {
+        max-width: 100%;
+        max-height: 85vh;
+    }
+}
+
+.conservation-help {
+  position: relative;
+  margin-left: 0.125rem;
+  svg {
+    position: absolute;
+    top: -.15rem;
+    height: 1.3rem;
+  }
+  path {
+    fill: $gray;
+  }
+  &:hover,
+  &:focus {
+    path {
+      fill: $darkgray;
+    }
+  }
+}
+
+[data-conservation-code="leastconcern"] {
+  background: #08ce7e;
+}
+[data-conservation-code="vulnerable"] {
+  background: lighten(orange, 2);
+}
+[data-conservation-code="nearthreatened"] {
+  background: lighten(red, 20);
+}
+[data-conservation-code="criticallyendangered"] {
+  background: lighten(red, 13);
+}
+[data-conservation-code="extinctinthewild"] {
+  background: darken(red, 13);
+}
+[data-conservation-code="extinct"] {
+  background: $black;
+}

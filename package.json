@@ -1,0 +1,19 @@
+{
+  "name": "aside",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Max Kohler <awesomephant@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-sass": "*",
+    "time-grunt": "*",
+    "jit-grunt": "*",
+    "grunt-browser-sync": "*",
+    "grunt-postcss": "*",
+    "grunt-ftp-deploy": "*",
+    "autoprefixer": "*",
+    "cssnano": "*"
+  }
+}

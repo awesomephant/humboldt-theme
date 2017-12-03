@@ -1,0 +1,65 @@
+.home {
+  overflow-x: hidden;
+}
+.home-hero {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  text-align: left;
+  @include bp(m) {
+    justify-content: center;
+    text-align: center;
+    padding-top: 20vh;
+  }
+}
+.hero-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  @include bp(m) {
+    text-align: center;
+    padding: 0 20%;
+    font-size: 4vw;
+    font-weight: 300;
+  }
+}
+
+
+.search-input {
+  border: 1px solid $lightgray;
+  padding: 0.5rem 0.6rem;
+  font-size: 2rem;
+  border-radius: 4px;
+  margin-top: 2rem;
+  font-family: $sans;
+  line-height: 1;
+  width: 80%;
+  @include bp(m) {
+    width: 60%;
+  }
+  &:focus {
+    outline: none;
+    border-color: $blue;
+  }
+}
+
+.home-classes {
+  max-width: 50rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  line-height: 1.55;
+  @include bp(m){
+    text-align: center;
+    padding: 0;
+  }
+}
+.home-class {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: $gray;
+  text-transform: capitalize;
+  margin-right: .5rem;
+  @include bp(m){
+    font-size: 1.2rem;
+  }
+}
