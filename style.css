@@ -42,32 +42,30 @@ a {
 .site-footer {
   font-size: .8rem;
   padding: 1rem;
-  color: #b4b4b6; }
+  color: #b4b4b6;
+  text-align: center; }
   .home .site-footer {
-    position: absolute;
     bottom: 0; }
 
 .search-form {
   position: relative;
   text-align: left;
-  width: 100%; }
-  @media (min-width: 45rem) {
-    .search-form {
-      width: 60%; } }
+  width: 90%; }
   .search-form .screen-reader-text {
     display: none; }
 
 .search-field {
   font-size: 1rem;
   line-height: .8;
-  border-radius: 3px;
-  border: 1px solid #1e1e1e;
-  padding: .8rem 1rem;
-  width: calc(100% - 3rem);
+  border-radius: 2px;
+  border-bottom: 1px solid #515151;
+  padding: .8rem 0;
+  width: 100%;
   font-family: "Suisse Int'l";
   appearance: none; }
   .search-field:focus {
-    outline: none; }
+    outline: none;
+    border-bottom-color: #1e1e1e; }
   .search-field::placeholder {
     color: #cfcfcf; }
 
@@ -131,15 +129,22 @@ div.search-results {
   font-size: .9rem; }
 
 .chip, .card-chip {
-  color: white;
-  font-weight: 500;
-  background: #b4b4b6;
+  color: #1e1e1e;
+  font-weight: 400;
+  background: gainsboro;
   font-size: 0.75rem;
   display: inline-block;
   padding: 0.3rem 0.6rem;
   padding-top: .4rem;
   border-radius: 2rem;
-  line-height: 1; }
+  line-height: 1;
+  text-decoration: none;
+  margin-bottom: .4rem;
+  margin-right: .2rem; }
+  .chip:hover, .card-chip:hover, .chip:focus, .card-chip:focus {
+    color: #1e1e1e;
+    background: #d7d7d7;
+    text-decoration: none; }
 
 .c, .btn {
   border: 1px solid #dfdfdf;
@@ -279,26 +284,57 @@ div.search-results {
   overflow-x: hidden; }
 
 .home-hero {
-  display: flex;
   flex-wrap: wrap;
   padding: 2rem;
   text-align: left; }
   @media (min-width: 45rem) {
     .home-hero {
-      justify-content: center;
-      text-align: center;
-      padding-top: 20vh; } }
+      height: 100vh;
+      position: relative;
+      padding: 6%; } }
+
+.home-search {
+  margin-bottom: 1rem; }
+
+.home-image {
+  position: fixed;
+  z-index: -100;
+  top: 0;
+  right: 0;
+  height: 100%; }
+
+.home-copy {
+  font-size: 1.1rem;
+  line-height: 1.45; }
+  @media (min-width: 45rem) {
+    .home-copy {
+      width: 55%; } }
+  .home-copy p {
+    margin-bottom: 1rem; }
 
 .hero-title {
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 2rem; }
+  .hero-title em {
+    display: block;
+    font-style: normal;
+    color: #848484; }
   @media (min-width: 45rem) {
     .hero-title {
-      text-align: center;
-      padding: 0 20%;
-      font-size: 4vw;
-      font-weight: 300; } }
+      width: 50%;
+      font-size: 1.8rem;
+      font-weight: 400; } }
+
+.home-image-caption {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  font-size: .9rem; }
+  .home-image-caption a {
+    text-decoration: none; }
+  .home-image-caption span {
+    color: #b4b4b6; }
 
 .search-input {
   border: 1px solid gainsboro;
@@ -315,25 +351,5 @@ div.search-results {
   .search-input:focus {
     outline: none;
     border-color: #2072FF; }
-
-.home-classes {
-  max-width: 50rem;
-  padding: 0 2rem;
-  margin: 0 auto;
-  line-height: 1.55; }
-  @media (min-width: 45rem) {
-    .home-classes {
-      text-align: center;
-      padding: 0; } }
-
-.home-class {
-  text-decoration: none;
-  font-size: 1.1rem;
-  color: #b4b4b6;
-  text-transform: capitalize;
-  margin-right: .5rem; }
-  @media (min-width: 45rem) {
-    .home-class {
-      font-size: 1.2rem; } }
 
 /*# sourceMappingURL=style.css.map */

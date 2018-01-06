@@ -61,6 +61,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('deploy', ['ftp-deploy']);
     grunt.registerTask('css', ['sass', 'postcss']);
-    grunt.registerTask('dev', ['browserSync', 'watch']);
+    grunt.registerTask('default', ['browserSync', 'watch']);
 
 };

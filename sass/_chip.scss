@@ -1,11 +1,19 @@
 .chip {
-    color: white;
-    font-weight: 500;
-    background: $gray;
+    color: $black;
+    font-weight: 400;
+    background: $lightgray;
     font-size: 0.75rem;
     display: inline-block;
     padding: 0.3rem 0.6rem;
     padding-top: .4rem;
     border-radius: 2rem;
     line-height: 1;
+    text-decoration: none;
+    margin-bottom: .4rem;
+    margin-right: .2rem;
+    &:hover, &:focus {
+      color: $black;
+      background: darken($lightgray, 2);
+      text-decoration: none;
+    }
   }

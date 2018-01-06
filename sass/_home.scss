@@ -2,25 +2,65 @@
   overflow-x: hidden;
 }
 .home-hero {
-  display: flex;
   flex-wrap: wrap;
   padding: 2rem;
   text-align: left;
   @include bp(m) {
-    justify-content: center;
-    text-align: center;
-    padding-top: 20vh;
+    height: 100vh;
+    position: relative;
+    padding: 6%;
   }
 }
+
+.home-search {
+  margin-bottom: 1rem;
+}
+
+.home-image {
+  position: fixed;
+  z-index: -100;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.home-copy {
+  font-size: 1.1rem;
+  line-height: 1.45;
+  @include bp(m){
+    width: 55%;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
 .hero-title {
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 2rem;
+  em {
+    display: block;
+    font-style: normal;
+    color: lighten($black, 40);
+  }
   @include bp(m) {
-    text-align: center;
-    padding: 0 20%;
-    font-size: 4vw;
-    font-weight: 300;
+    width: 50%;
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+}
+
+.home-image-caption {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  font-size: .9rem;
+  a {
+    text-decoration: none;
+  }
+  span {
+    color: $gray;
   }
 }
 
@@ -40,26 +80,5 @@
   &:focus {
     outline: none;
     border-color: $blue;
-  }
-}
-
-.home-classes {
-  max-width: 50rem;
-  padding: 0 2rem;
-  margin: 0 auto;
-  line-height: 1.55;
-  @include bp(m){
-    text-align: center;
-    padding: 0;
-  }
-}
-.home-class {
-  text-decoration: none;
-  font-size: 1.1rem;
-  color: $gray;
-  text-transform: capitalize;
-  margin-right: .5rem;
-  @include bp(m){
-    font-size: 1.2rem;
   }
 }

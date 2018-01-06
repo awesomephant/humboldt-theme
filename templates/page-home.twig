@@ -1,18 +1,25 @@
 {% extends "base.twig" %}
 {% block content %}
 <section class="home-hero">
-	<h2 class='hero-title'>Alexander von Humboldt-Gymnasium Konstanz Lehrsammlung</h2>
+	<h2 class='hero-title'>Humboldt‐Gymnasium Konstanz <em>Lehrsammlung</em></h2>
+<div class="home-copy">
+<p>Das <a href="http://www.humboldt-konstanz.de/">Alexander von Humboldt Gymnasium Konstanz</a> beherbergt eine umfangreiche Sammlung biologischer Lehrpräperate aus dem 20. Jahrhundert. {{objects | length}} Objekte aus dieser Sammlung sind hier dokumentiert.</p>
+	<div class="home-search">
 	{% include "searchform.twig" %}
-</section>
-<nav class="home-classes">
+	</div>
 	{% for class in bio_classes %}
-<a href="{{class.link}}" class="home-class">{{class.title}}</a>
+		<a href="{{class.link}}" class="home-class chip">{{class.title}}</a>
 	{% endfor %}
-	</nav>
+	</div>
 	{% for obj in post.get_field('featured_objects') %}
-	{# <div class="home-featured_card">
-		{{ include("object-card.twig") }}	
-	</div> #}
+	{% set image = obj.get_field('object_images')[0] %}
+	<img class='home-image' src="{{ TimberImage(image).src | resize(800, 1000)}}" alt="{{obj.title}}">
+	<div class="home-image-caption">
+		<span class='figure-location'>Rechts:</span>
+		<h2><a href='{{obj.link}}'>{{obj.title}}</a></h2>
+		<p>Regal-Nr. {{obj.id}}</p>
+	</div>
 	{% endfor %}
+</section>
 
 {% endblock %}

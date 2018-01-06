@@ -34,8 +34,8 @@ a {
     font-size: .8rem;
     padding: 1rem;
     color: $gray;
+    text-align: center;
     .home & {
-        position: absolute;
       bottom: 0;
     }
 }
@@ -43,10 +43,8 @@ a {
 .search-form {
     position: relative;
     text-align: left;
-    width: 100%;
-    @include bp(m){
-        width: 60%;
-    }
+    width: 90%;
+
     .screen-reader-text {
         display: none;
     }
@@ -55,14 +53,15 @@ a {
 .search-field {
     font-size: 1rem;
     line-height: .8;
-    border-radius: 3px;
-    border: 1px solid $black;
-    padding: .8rem 1rem;
-    width: calc(100% - 3rem);
+    border-radius: 2px;
+    border-bottom: 1px solid lighten($black, 20);
+    padding: .8rem 0;
+    width: 100%;
     font-family: $sans;
     appearance: none;
     &:focus {
         outline: none;
+        border-bottom-color: $black;
     }
     &::placeholder {
         color: darken($lightgray, 5);
