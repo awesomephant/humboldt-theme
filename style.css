@@ -14,12 +14,12 @@
 
 body {
   font-family: "Suisse Int'l";
-  color: #1e1e1e; }
+  color: #21201e; }
 
 a {
-  color: #1e1e1e; }
+  color: #21201e; }
   a:hover, a:focus {
-    color: rgba(30, 30, 30, 0.7); }
+    color: rgba(33, 32, 30, 0.7); }
 
 .site-header {
   padding: 1rem 5%;
@@ -34,7 +34,7 @@ a {
 
 .site-title {
   text-decoration: none;
-  color: #1e1e1e;
+  color: #21201e;
   font-weight: 400;
   display: block;
   margin-bottom: .5rem; }
@@ -42,7 +42,7 @@ a {
 .site-footer {
   font-size: .8rem;
   padding: 1rem;
-  color: #b4b4b6;
+  color: #b7b6b4;
   text-align: center; }
   .home .site-footer {
     bottom: 0; }
@@ -58,16 +58,16 @@ a {
   font-size: 1rem;
   line-height: .8;
   border-radius: 2px;
-  border-bottom: 1px solid #515151;
+  border-bottom: 1px solid #56544f;
   padding: .8rem 0;
   width: 100%;
   font-family: "Suisse Int'l";
   appearance: none; }
   .search-field:focus {
     outline: none;
-    border-bottom-color: #1e1e1e; }
+    border-bottom-color: #21201e; }
   .search-field::placeholder {
-    color: #cfcfcf; }
+    color: #dddcd8; }
 
 .search-submit {
   position: absolute;
@@ -93,7 +93,7 @@ div.search-results {
   font-size: 1.4rem; }
   .page-header p {
     font-size: 1.2rem;
-    color: #b4b4b6; }
+    color: #b7b6b4; }
 
 .card {
   margin-bottom: 1rem;
@@ -129,9 +129,9 @@ div.search-results {
   font-size: .9rem; }
 
 .chip, .card-chip {
-  color: #1e1e1e;
+  color: #21201e;
   font-weight: 400;
-  background: gainsboro;
+  background: #e9e8e6;
   font-size: 0.75rem;
   display: inline-block;
   padding: 0.3rem 0.6rem;
@@ -142,25 +142,25 @@ div.search-results {
   margin-bottom: .4rem;
   margin-right: .2rem; }
   .chip:hover, .card-chip:hover, .chip:focus, .card-chip:focus {
-    color: #1e1e1e;
-    background: #d7d7d7;
+    color: #21201e;
+    background: #e4e3e1;
     text-decoration: none; }
 
 .c, .btn {
-  border: 1px solid #dfdfdf;
-  box-shadow: 0 3px 4px -2px rgba(30, 30, 30, 0.2);
+  border: 1px solid #ebeae9;
+  box-shadow: 0 3px 4px -2px rgba(33, 32, 30, 0.2);
   border-radius: 4px; }
 
 .btn {
   padding: .8rem 1.2rem;
   font-size: .9rem;
   text-decoration: none;
-  color: #1e1e1e;
+  color: #21201e;
   display: inline-block;
   margin-bottom: 1rem; }
   .btn:hover, .btn:focus {
-    color: #1e1e1e;
-    background: #f8f8f8; }
+    color: #21201e;
+    background: white; }
 
 .object-list {
   width: 100%;
@@ -186,7 +186,7 @@ div.search-results {
 .object-details-section {
   display: flex;
   font-size: 1.1rem;
-  border-bottom: 1px solid gainsboro;
+  border-bottom: 1px solid #e9e8e6;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   flex-flow: column; }
@@ -207,22 +207,22 @@ div.search-results {
     .object-details-section .section-details li {
       margin-bottom: .8rem; }
     .object-details-section .section-details h3 {
-      color: rgba(30, 30, 30, 0.5); }
+      color: rgba(33, 32, 30, 0.5); }
     .object-details-section .section-details li a {
       text-decoration: none;
-      border-bottom: 0.6px solid #1e1e1e; }
+      border-bottom: 0.6px solid #21201e; }
     .object-details-section .section-details input {
-      background: rgba(220, 220, 220, 0.5);
+      background: rgba(233, 232, 230, 0.5);
       padding: .8rem;
       max-width: 35rem;
       border-radius: 2px;
       display: block;
-      border: 1px solid gainsboro;
+      border: 1px solid #e9e8e6;
       width: 100%; }
       .object-details-section .section-details input:focus {
         box-shadow: none;
         outline: 0;
-        border-color: #1e1e1e; }
+        border-color: #21201e; }
     .object-details-section .section-details span {
       display: block;
       max-width: 30rem; }
@@ -258,9 +258,9 @@ div.search-results {
     top: -.15rem;
     height: 1.3rem; }
   .conservation-help path {
-    fill: #b4b4b6; }
+    fill: #b7b6b4; }
   .conservation-help:hover path, .conservation-help:focus path {
-    fill: #787878; }
+    fill: #7b7a78; }
 
 [data-conservation-code="leastconcern"] {
   background: #08ce7e; }
@@ -278,7 +278,7 @@ div.search-results {
   background: #bd0000; }
 
 [data-conservation-code="extinct"] {
-  background: #1e1e1e; }
+  background: #21201e; }
 
 .home {
   overflow-x: hidden; }
@@ -319,7 +319,7 @@ div.search-results {
   .hero-title em {
     display: block;
     font-style: normal;
-    color: #848484; }
+    color: #8b8780; }
   @media (min-width: 45rem) {
     .hero-title {
       width: 50%;
@@ -334,10 +334,10 @@ div.search-results {
   .home-image-caption a {
     text-decoration: none; }
   .home-image-caption span {
-    color: #b4b4b6; }
+    color: #b7b6b4; }
 
 .search-input {
-  border: 1px solid gainsboro;
+  border: 1px solid #e9e8e6;
   padding: 0.5rem 0.6rem;
   font-size: 2rem;
   border-radius: 4px;
