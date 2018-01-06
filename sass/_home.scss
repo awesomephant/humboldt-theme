@@ -17,11 +17,14 @@
 }
 
 .home-image {
-  position: fixed;
-  z-index: -100;
-  top: 0;
-  right: 0;
-  height: 100%;
+  width: 100%;
+  @include bp(m){
+   position: fixed;
+   z-index: -100;
+   top: 0;
+   right: 0;
+   height: 100%;
+  }
 }
 
 .home-copy {
@@ -52,15 +55,30 @@
 }
 
 .home-image-caption {
-  position: absolute;
-  bottom: 5%;
-  left: 5%;
+  padding: 1rem;
+  @include bp(m){
+    padding: 0;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+  }
   font-size: .9rem;
   a {
     text-decoration: none;
   }
   span {
     color: $gray;
+    &.above {
+      @include bp(m){
+        display: none;
+      }
+    }
+    &.right {
+      display: none;
+      @include bp(m){
+        display: block;
+      }
+    }
   }
 }
 
