@@ -57,6 +57,7 @@ a {
     text-align: left;
     height: 100%;
     padding-left: 1rem;
+    position: relative;
     border-top: 1px solid $black;
     @include bp(m) {
         padding-left: 0;
@@ -101,7 +102,7 @@ a {
     background-size: 1.5rem;
     background-color: transparent;
     cursor: pointer;
-    background-position: center top .8rem;
+    background-position: center top .5rem;
     &:hover,
     &:focus {
         opacity: .6;
