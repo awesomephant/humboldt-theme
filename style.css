@@ -3,6 +3,9 @@
  Description: Custom theme for use with Humboldt Biology Collection
  Author: Max Kohler
 */
+@font-face {
+  font-family: "Suisse Int'l";
+  src: url("../assets/fonts/SuisseIntl-Regular-WebXL.ttf") format("truetype"), url("../assets/fonts/SuisseIntl-Regular-WebXL.woff") format("woff"); }
 * {
   vertical-align: baseline;
   font-weight: inherit;

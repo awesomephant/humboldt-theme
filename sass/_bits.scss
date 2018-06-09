@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Suisse Int'l";
+  src: url("../assets/fonts/SuisseIntl-Regular-WebXL.ttf") format("truetype"),
+       url("../assets/fonts/SuisseIntl-Regular-WebXL.woff") format("woff"),
+}
+
 @mixin bp($point) {
   @if $point == l {
     @media (min-width: 65rem) { @content; }
