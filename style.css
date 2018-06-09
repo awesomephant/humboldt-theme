@@ -48,9 +48,11 @@ a {
 
 .site-footer {
   font-size: .9rem;
+  border-top: 1px solid #21201e;
   padding: 1rem; }
   .home .site-footer {
     opacity: .5;
+    border-top: 0;
     position: absolute;
     bottom: 0; }
   .site-footer a {
@@ -111,6 +113,7 @@ div.search-results {
   padding: 1rem;
   font-size: calc(1.2rem + 3vw); }
   .page-header p {
+    margin-top: -.2em;
     color: #b7b6b4; }
 
 .page-content {
@@ -137,7 +140,7 @@ div.search-results {
   padding-top: .5rem; }
 
 .card-title {
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: -.1rem; }
   .card-title a {
     text-decoration: none;
@@ -149,13 +152,18 @@ div.search-results {
   left: .5rem;
   letter-spacing: .05em;
   font-size: .8rem;
-  mix-blend-mode: multiply; }
+  mix-blend-mode: multiply;
+  color: #21201e; }
 
 .card-image {
   width: 100%;
+  margin-bottom: -.4rem;
   transition: 230ms; }
   .card-image:hover, .card-image:focus {
     opacity: .8; }
+
+.card-description {
+  color: #b7b6b4; }
 
 .chip, .card-chip {
   color: #21201e;

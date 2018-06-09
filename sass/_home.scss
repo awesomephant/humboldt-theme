@@ -38,7 +38,7 @@ html {
 .home-copy {
   font-size: calc(1.1rem + 2.5vw);
   line-height: 1.2;
-  color: #00A162;
+  color: $green;
   mix-blend-mode: multiply;
   p {
     text-indent: 1em;
@@ -47,7 +47,7 @@ html {
     margin-right: .5rem;
   }
   a {
-    color: #00A162;
+    color: $green;
   }
 }
 
