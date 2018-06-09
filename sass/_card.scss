@@ -1,6 +1,8 @@
 .card {
 	margin-bottom: 1rem;
 	display: inline-block;
+	font-size: .9rem;
+	letter-spacing: .02em;
 	position: relative;
 }
 
@@ -19,17 +21,24 @@
 
 .card-title {
 	font-weight: 500;
-	font-size: 1rem;
+	margin-bottom: -.1rem;
 	a {
 		text-decoration: none;
 		color: inherit;
 	}
 }
 
+.card-id {
+	position: absolute;
+	top: .5rem;
+	left: .5rem;
+	letter-spacing: .05em;
+	font-size: .8rem;
+	mix-blend-mode: multiply;
+}
+
 .card-image {
-	display: block;
 	width: 100%;
-	border-radius: 2px;
 	transition: $fast;
 	&:hover, &:focus {
 		opacity: .8;
@@ -37,5 +46,4 @@
 }
 
 .card-description {
-	font-size: .9rem;
 }

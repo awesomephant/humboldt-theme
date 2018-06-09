@@ -1,105 +1,120 @@
 .object-list {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    columns: 2;
+    column-gap: 1rem;
+    @include bp(m) {
+        columns: 3;
+    }
+    @include bp(l) {
+        columns: 4;
+    }
     .card {
-      flex-shrink: 1;
-      flex-basis: 50%;
-      padding-right: .5rem;
+        flex-shrink: 1;
+        flex-basis: 50%;
+    }
+    .object-details & {
+      columns: 2;
       @include bp(m){
-        flex-basis: 25%;
+        columns: 4;
       }
     }
 }
 
-.object {
-  display: grid;
-  @include bp(m) {
-    //       grid-template-columns: 1fr 1fr;
-  }
-}
 .object-details {
-    grid-column: span 1;
-    padding: 1rem 5%;
     line-height: 1.45;
-    a {
-    }
+    width: 100%;
 }
 
 .object-details-section {
-  display: flex;
-  font-size: 1.1rem;
-  border-bottom: 1px solid $lightgray;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  flex-flow: column;
-  @include bp(m){
-    flex-flow: row;
-  }
-  .section-title {
-    flex-basis: 30%;
-    font-weight: 600;
-    margin-bottom: .5rem;
-    @include bp(m){
-      font-weight: 400;
+    width: 100%;
+    display: flex;
+    font-size: calc(1.1rem + .3vw);
+    border-bottom: 1px solid $black;
+    padding: 1rem;
+    flex-flow: column;
+    @include bp(m) {
+        flex-flow: row;
     }
-  }
-  .section-details {
-    flex-basis: 70%;
-    flex-shrink: 1;
-    list-style: none;
-    li {
-      margin-bottom: .8rem;
+    .section-title {
+        flex-basis: 30%;
+        flex-shrink: 0;
+        font-weight: 600;
+        margin-bottom: .5rem;
+        @include bp(m) {
+            font-weight: 400;
+        }
     }
-    h3 {
-      color: rgba($black, .5);
+    .section-details {
+        flex-basis: 70%;
+        flex-shrink: 1;
+        list-style: none;
+        columns: 2;
+        &.related-objects {
+          columns: 1;
+        }
+        li {
+            margin-bottom: .8rem;
+            display: inline-block;
+            width: 100%;
+        }
+        h3 {
+            color: rgba($black, .5);
+        }
+        li a {
+            text-decoration: none;
+            border-bottom: .6px solid $black;
+        }
+        input {
+            background: rgba($lightgray, .5);
+            padding: .8rem;
+            max-width: 35rem;
+            border-radius: 2px;
+            display: block;
+            border: 1px solid $lightgray;
+            width: 100%;
+            &:focus {
+                box-shadow: none;
+                outline: 0;
+                border-color: $black;
+            }
+        }
+        span {
+            display: block;
+            max-width: 30rem;
+        }
     }
-    li a {
-      text-decoration: none;
-      border-bottom: .6px solid $black;
-    }
-    input {
-      background: rgba($lightgray, .5);
-      padding: .8rem;
-      max-width: 35rem;
-      border-radius: 2px;
-      display: block;
-      border: 1px solid $lightgray;
-      width: 100%;
-      &:focus {
-        box-shadow: none;
-        outline: 0;
-        border-color: $black;
-      }
-    }
-    span {
-      display: block;
-      max-width: 30rem;
-    }
-  }
 }
 
 .object-images {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 1rem;
-  max-width: 100%;
-  @include bp(m){
-      flex-wrap: nowrap;
-  }
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    max-width: 100%;
+    height: 90vh;
+    align-items: center;
+    @include bp(m) {
+        flex-wrap: nowrap;
+    }
 }
+
+.object-title {
+  column-span: all;
+  display: block !important;
+}
+
 .object-image {
     flex-shrink: 1;
     margin-right: 1rem;
+    flex-basis: 100%;
     a {
-      cursor: zoom-in;
-      display: block;
-      transition: $fast;
-      &:hover, &:focus {
-        transform: scale(1.01);
-      }
+        cursor: zoom-in;
+        display: block;
+        transition: $fast;
+        &:hover,
+        &:focus {
+            transform: scale(1.01);
+        }
     }
     img {
         max-width: 100%;
@@ -108,39 +123,44 @@
 }
 
 .conservation-help {
-  position: relative;
-  margin-left: 0.125rem;
-  svg {
-    position: absolute;
-    top: -.15rem;
-    height: 1.3rem;
-  }
-  path {
-    fill: $gray;
-  }
-  &:hover,
-  &:focus {
-    path {
-      fill: $darkgray;
+    position: relative;
+    margin-left: 0.125rem;
+    svg {
+        position: absolute;
+        top: -.15rem;
+        height: 1.3rem;
     }
-  }
+    path {
+        fill: $gray;
+    }
+    &:hover,
+    &:focus {
+        path {
+            fill: $darkgray;
+        }
+    }
 }
 
 [data-conservation-code="leastconcern"] {
-  background: #08ce7e;
+    background: #08ce7e;
 }
+
 [data-conservation-code="vulnerable"] {
-  background: lighten(orange, 2);
+    background: lighten(orange, 2);
 }
+
 [data-conservation-code="nearthreatened"] {
-  background: lighten(red, 20);
+    background: lighten(red, 20);
 }
+
 [data-conservation-code="criticallyendangered"] {
-  background: lighten(red, 13);
+    background: lighten(red, 13);
 }
+
 [data-conservation-code="extinctinthewild"] {
-  background: darken(red, 13);
+    background: darken(red, 13);
 }
+
 [data-conservation-code="extinct"] {
-  background: $black;
+    background: $black;
 }

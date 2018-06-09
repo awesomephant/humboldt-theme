@@ -1,11 +1,14 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	{%include 'header.twig'%}
-
+{% include "header.twig" %}
 <header class="page-header">
 {{title}}
+{% if posts|length > 1 %}
 <p>{{posts | length}} Objekte</p>
+{% else %}
+<p>1 Objekt</p>
+{% endif %}
 </header>
 <div class="search-results">
 <div class="object-list">

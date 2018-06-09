@@ -16,7 +16,7 @@ $myClass = wp_get_post_terms($post->ID, 'bio_class')[0]->slug;
 $context['myClass'] = wp_get_post_terms($post->ID, 'bio_class')[0];
 $args = array(
 	'post_type' => 'object',
-	'showposts' => 8,
+	'showposts' => 6,
 	'tax_query' => array(
 		array(
 			'taxonomy' => 'bio_class',

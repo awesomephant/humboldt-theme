@@ -1,5 +1,12 @@
+html {
+  background: #fff;
+}
 .home {
   overflow-x: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
 }
 .home-hero {
   flex-wrap: wrap;
@@ -29,13 +36,18 @@
 }
 
 .home-copy {
-  font-size: 1.1rem;
-  line-height: 1.45;
-  @include bp(m){
-    width: 55%;
-  }
+  font-size: calc(1.1rem + 2.5vw);
+  line-height: 1.2;
+  color: #00A162;
+  mix-blend-mode: multiply;
   p {
-    margin-bottom: 1rem;
+    text-indent: 1em;
+  }
+  em {
+    margin-right: .5rem;
+  }
+  a {
+    color: #00A162;
   }
 }
 
@@ -46,23 +58,19 @@
   em {
     display: block;
     font-style: normal;
-    color: lighten($black, 40);
+    color: rgba($black, .5);
   }
   @include bp(m) {
-    width: 50%;
     font-size: 1.8rem;
     font-weight: 400;
   }
 }
 
 .home-image-caption {
-  padding: 1rem;
-  @include bp(m){
     padding: 0;
     position: absolute;
     bottom: 5%;
     left: 5%;
-  }
   font-size: .9rem;
   a {
     text-decoration: none;

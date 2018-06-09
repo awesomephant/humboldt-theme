@@ -5,9 +5,8 @@
 	{% endblock %}
 	</head>
 {% endblock %}
-
-	<body class="{{body_class}}" data-template="base.twig">
-			{% block content %}
+	<body class="{{body_class}}" style="background-image: url({{post.get_field('featured_objects')[0].get_field('object_images')[0].url}})" data-template="base.twig">
+		{% block content %}
 			Sorry, no content
 			{% endblock %}
 		{% block footer %}
@@ -17,27 +16,9 @@
 			{{ function('wp_footer') }}
 		{% endblock %}
 		<script>
-		function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-		var objects = "{{objects|join(',')}}";
-		objects = objects.split(',')
-		var searchField = document.querySelector('.search-field');
-		searchField.setAttribute('placeholder', 'Suche "' + objects[getRandomInt(0, objects.length)] + '"')
-		console.log(objects);
-		</script>
-		<script>
-    {% include "./static/site.js" %}
+		{% include "./static/site.js" %}
 	</script>
-	<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42590037-7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)};
-  gtag('js', new Date());
 
-  gtag('config', 'UA-42590037-7');
-</script>
 
 	</body>
 </html>
