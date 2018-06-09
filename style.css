@@ -137,7 +137,8 @@ div.search-results {
   z-index: 100; }
 
 .card-content {
-  padding-top: .5rem; }
+  padding-top: .5rem;
+  text-align: left; }
 
 .card-title {
   font-weight: 400;
@@ -196,6 +197,7 @@ div.search-results {
 .object-list {
   width: 100%;
   columns: 2;
+  text-align: center;
   column-gap: 1rem; }
   @media (min-width: 45rem) {
     .object-list {
