@@ -5,5 +5,5 @@ composer.lock
 node_modules/
 .sass-cache/
 yarn.lock
-./style.css
-./style.css.map
+style.css
+style.css.map

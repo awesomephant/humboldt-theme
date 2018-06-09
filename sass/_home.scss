@@ -10,7 +10,7 @@ html {
 }
 .home-hero {
   flex-wrap: wrap;
-  padding: 2rem;
+  padding: 1rem;
   text-align: left;
   @include bp(m) {
     height: 100vh;
@@ -51,43 +51,16 @@ html {
   }
 }
 
-.hero-title {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  em {
-    display: block;
-    font-style: normal;
-    color: rgba($black, .5);
-  }
-  @include bp(m) {
-    font-size: 1.8rem;
-    font-weight: 400;
-  }
-}
-
 .home-image-caption {
-    padding: 0;
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
+  padding: 1rem;
   font-size: .9rem;
+  @include bp(m){
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
   a {
     text-decoration: none;
-  }
-  span {
-    color: $gray;
-    &.above {
-      @include bp(m){
-        display: none;
-      }
-    }
-    &.right {
-      display: none;
-      @include bp(m){
-        display: block;
-      }
-    }
   }
 }
 
